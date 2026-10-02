@@ -1,0 +1,16 @@
+{
+  "fuente": "Yahoo Finance vía yfinance (auto_adjust=True)",
+  "fecha_descarga": "2026-09-30T17:52:35",
+  "version_yfinance": "1.7.0",
+  "tickers": [
+    "NVDA",
+    "AMZN",
+    "TSLA",
+    "META",
+    "NFLX",
+    "GOOGL"
+  ],
+  "inicio": "2015-01-01",
+  "fin_inclusivo": "2026-08-31",
+  "filas": 17592
+}
