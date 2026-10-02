@@ -1,0 +1,84 @@
+{
+  "segundos_optimizacion": 3783.0082410999457,
+  "segundos_etapa_walk_forward": 66.67170559999067,
+  "configuraciones_evaluadas": 460800,
+  "por_variante": {
+    "por_activo": {
+      "segundos": 894.9476391999632,
+      "configuraciones": 187200,
+      "ventanas": 101,
+      "fallbacks": {
+        "por_regimen": {
+          "Tendencia": 277,
+          "Reversión": 337,
+          "Crisis": 602
+        },
+        "estudios_por_regimen": 606
+      }
+    },
+    "compartido": {
+      "segundos": 344.43028919998324,
+      "configuraciones": 31200,
+      "ventanas": 101,
+      "fallbacks": {
+        "por_regimen": {
+          "Tendencia": 57,
+          "Reversión": 62,
+          "Crisis": 101
+        },
+        "estudios_por_regimen": 101
+      }
+    },
+    "anclado_por_activo": {
+      "segundos": 2543.630312699999,
+      "configuraciones": 242400,
+      "ventanas": 101,
+      "fallbacks": {
+        "por_regimen": {
+          "Tendencia": 8,
+          "Reversión": 9,
+          "Crisis": 437
+        },
+        "estudios_por_regimen": 606
+      }
+    }
+  },
+  "trials_por_estudio": 100,
+  "trials_aleatorios_iniciales": 30,
+  "ventanas_walk_forward": 100,
+  "ventana_final_congelada": {
+    "k": 100,
+    "train_start": "2023-10-27",
+    "train_end": "2024-04-26",
+    "test_start": null,
+    "test_end": null
+  },
+  "variante_elegida": "por_activo",
+  "criterio": "mayor Calmar WF-OOS (portafolio RP) dentro de TRAIN",
+  "rebalanceo_elegido": {
+    "dias": 10,
+    "banda": 0.2,
+    "criterio": "mayor Calmar WF-OOS en la malla f × δ dentro de TRAIN"
+  },
+  "wfe_rolling": {
+    "cagr_oos": -0.006832247210915354,
+    "cagr_is_promedio": 0.10451149855505366,
+    "wfe_cagr": -0.06537316281343265,
+    "calmar_oos": -0.043226139551140665,
+    "calmar_is_promedio": 6.264845647211929,
+    "wfe_calmar": -0.006899793224814371
+  },
+  "wfe_anclado": {
+    "cagr_oos": -0.031782769599288496,
+    "cagr_is_promedio": 0.10324127274952,
+    "wfe_cagr": -0.30784945548277604,
+    "calmar_oos": -0.1181310363804547,
+    "calmar_is_promedio": 2.5258814149631017,
+    "wfe_calmar": -0.04676824322814869
+  },
+  "features_regimen": [
+    "volatilidad",
+    "r2_tendencia"
+  ],
+  "procesos": 7
+}

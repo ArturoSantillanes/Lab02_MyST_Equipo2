@@ -1,0 +1,104 @@
+{
+  "RP": {
+    "rebalanceos": {
+      "crisis": 11,
+      "calendario + banda": 6
+    },
+    "rebalanceos_omitidos_por_banda": 204,
+    "turnover_por_rebalanceo": 0.10135493262642678,
+    "rebalanceos_por_anio": 2.0468227424749164,
+    "costo_anual_rebalanceo": 0.0005186389529044581,
+    "conflictos": 26,
+    "conflictos_empatados": 5,
+    "kappa_mediana": 34.506727860617026,
+    "kappa_max": 365.2440225737707,
+    "max_exposicion_post_ejecucion": 0.6679165243613335,
+    "max_exposicion_al_cierre": 0.6706814082798455,
+    "exposicion_promedio": 0.14366975255025075,
+    "recortes_apalancamiento": 0,
+    "operaciones_largas": 248,
+    "operaciones_cortas": 376,
+    "entradas_por_regimen": {
+      "Tendencia": 339,
+      "Reversión": 258,
+      "Crisis": 27
+    },
+    "motivos_salida": {
+      "SL": 313,
+      "TP": 149,
+      "time-stop": 113,
+      "señal": 47,
+      "rebalanceo": 2
+    },
+    "turnover_anual": 5.273725075404447,
+    "costos_totales": 104402.23377978602
+  },
+  "EW": {
+    "rebalanceos": {
+      "crisis": 11,
+      "calendario + banda": 4
+    },
+    "rebalanceos_omitidos_por_banda": 206,
+    "turnover_por_rebalanceo": 0.09882180319582758,
+    "rebalanceos_por_anio": 1.8060200668896322,
+    "costo_anual_rebalanceo": 0.00044618539904470644,
+    "conflictos": 26,
+    "conflictos_empatados": 5,
+    "kappa_mediana": 34.506727860617026,
+    "kappa_max": 365.2440225737707,
+    "max_exposicion_post_ejecucion": 0.6205027526292967,
+    "max_exposicion_al_cierre": 0.6166381790631769,
+    "exposicion_promedio": 0.1443468071054392,
+    "recortes_apalancamiento": 0,
+    "operaciones_largas": 248,
+    "operaciones_cortas": 376,
+    "entradas_por_regimen": {
+      "Tendencia": 339,
+      "Reversión": 258,
+      "Crisis": 27
+    },
+    "motivos_salida": {
+      "SL": 313,
+      "TP": 149,
+      "time-stop": 113,
+      "señal": 47,
+      "rebalanceo": 2
+    },
+    "turnover_anual": 5.313427988187178,
+    "costos_totales": 103273.80599597022
+  },
+  "RP naïve": {
+    "rebalanceos": {
+      "crisis": 11,
+      "calendario + banda": 7
+    },
+    "rebalanceos_omitidos_por_banda": 203,
+    "turnover_por_rebalanceo": 0.09890774527878668,
+    "rebalanceos_por_anio": 2.1672240802675584,
+    "costo_anual_rebalanceo": 0.000535888118232891,
+    "conflictos": 26,
+    "conflictos_empatados": 5,
+    "kappa_mediana": 34.812186404041796,
+    "kappa_max": 365.2440225737707,
+    "max_exposicion_post_ejecucion": 0.6675324440119172,
+    "max_exposicion_al_cierre": 0.670409872385402,
+    "exposicion_promedio": 0.14291716306092878,
+    "recortes_apalancamiento": 0,
+    "operaciones_largas": 248,
+    "operaciones_cortas": 376,
+    "entradas_por_regimen": {
+      "Tendencia": 339,
+      "Reversión": 258,
+      "Crisis": 27
+    },
+    "motivos_salida": {
+      "SL": 313,
+      "TP": 149,
+      "time-stop": 113,
+      "señal": 47,
+      "rebalanceo": 2
+    },
+    "turnover_anual": 5.253635684027125,
+    "costos_totales": 105014.29924428862
+  }
+}

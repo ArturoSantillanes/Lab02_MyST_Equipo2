@@ -1,0 +1,10 @@
+{
+  "train_inicio": "2015-01-02",
+  "train_fin": "2024-04-26",
+  "test_inicio": "2024-04-29",
+  "test_fin": "2026-08-31",
+  "dias_train": 2345,
+  "dias_test": 587,
+  "fraccion_train": 0.8,
+  "fechas_eliminadas_limpieza": 0
+}

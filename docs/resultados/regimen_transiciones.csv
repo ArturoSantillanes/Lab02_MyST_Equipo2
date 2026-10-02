@@ -1,0 +1,42 @@
+fecha,de,a,posiciones_abiertas,regla
+2016-01-22,Tendencia,Crisis,3,rebalanceo inmediato al open siguiente con M = 0.3; entradas nuevas solo 3 de 3
+2016-02-22,Crisis,Tendencia,0,posiciones conservan SL/TP; θ nuevo para entradas; M nuevo en el siguiente rebalanceo
+2016-03-21,Tendencia,Reversión,3,posiciones conservan SL/TP; θ nuevo para entradas; M nuevo en el siguiente rebalanceo
+2016-04-19,Reversión,Crisis,3,rebalanceo inmediato al open siguiente con M = 0.3; entradas nuevas solo 3 de 3
+2016-05-10,Crisis,Tendencia,0,posiciones conservan SL/TP; θ nuevo para entradas; M nuevo en el siguiente rebalanceo
+2016-08-11,Tendencia,Reversión,2,posiciones conservan SL/TP; θ nuevo para entradas; M nuevo en el siguiente rebalanceo
+2017-02-09,Reversión,Tendencia,0,posiciones conservan SL/TP; θ nuevo para entradas; M nuevo en el siguiente rebalanceo
+2017-02-24,Tendencia,Reversión,1,posiciones conservan SL/TP; θ nuevo para entradas; M nuevo en el siguiente rebalanceo
+2017-07-19,Reversión,Tendencia,3,posiciones conservan SL/TP; θ nuevo para entradas; M nuevo en el siguiente rebalanceo
+2017-08-30,Tendencia,Crisis,2,rebalanceo inmediato al open siguiente con M = 0.3; entradas nuevas solo 3 de 3
+2017-09-14,Crisis,Reversión,0,posiciones conservan SL/TP; θ nuevo para entradas; M nuevo en el siguiente rebalanceo
+2017-11-02,Reversión,Tendencia,5,posiciones conservan SL/TP; θ nuevo para entradas; M nuevo en el siguiente rebalanceo
+2017-12-15,Tendencia,Reversión,2,posiciones conservan SL/TP; θ nuevo para entradas; M nuevo en el siguiente rebalanceo
+2018-02-14,Reversión,Tendencia,3,posiciones conservan SL/TP; θ nuevo para entradas; M nuevo en el siguiente rebalanceo
+2018-04-06,Tendencia,Crisis,4,rebalanceo inmediato al open siguiente con M = 0.3; entradas nuevas solo 3 de 3
+2018-06-25,Crisis,Tendencia,0,posiciones conservan SL/TP; θ nuevo para entradas; M nuevo en el siguiente rebalanceo
+2018-08-28,Tendencia,Crisis,3,rebalanceo inmediato al open siguiente con M = 0.3; entradas nuevas solo 3 de 3
+2018-11-07,Crisis,Tendencia,1,posiciones conservan SL/TP; θ nuevo para entradas; M nuevo en el siguiente rebalanceo
+2019-01-15,Tendencia,Crisis,1,rebalanceo inmediato al open siguiente con M = 0.3; entradas nuevas solo 3 de 3
+2019-01-30,Crisis,Reversión,0,posiciones conservan SL/TP; θ nuevo para entradas; M nuevo en el siguiente rebalanceo
+2019-02-28,Reversión,Crisis,2,rebalanceo inmediato al open siguiente con M = 0.3; entradas nuevas solo 3 de 3
+2019-04-11,Crisis,Tendencia,0,posiciones conservan SL/TP; θ nuevo para entradas; M nuevo en el siguiente rebalanceo
+2019-06-03,Tendencia,Reversión,1,posiciones conservan SL/TP; θ nuevo para entradas; M nuevo en el siguiente rebalanceo
+2019-06-17,Reversión,Tendencia,4,posiciones conservan SL/TP; θ nuevo para entradas; M nuevo en el siguiente rebalanceo
+2019-07-16,Tendencia,Reversión,3,posiciones conservan SL/TP; θ nuevo para entradas; M nuevo en el siguiente rebalanceo
+2019-11-13,Reversión,Tendencia,3,posiciones conservan SL/TP; θ nuevo para entradas; M nuevo en el siguiente rebalanceo
+2020-03-11,Tendencia,Crisis,5,rebalanceo inmediato al open siguiente con M = 0.3; entradas nuevas solo 3 de 3
+2020-06-26,Crisis,Tendencia,0,posiciones conservan SL/TP; θ nuevo para entradas; M nuevo en el siguiente rebalanceo
+2020-10-13,Tendencia,Reversión,3,posiciones conservan SL/TP; θ nuevo para entradas; M nuevo en el siguiente rebalanceo
+2020-12-16,Reversión,Tendencia,0,posiciones conservan SL/TP; θ nuevo para entradas; M nuevo en el siguiente rebalanceo
+2021-03-16,Tendencia,Reversión,3,posiciones conservan SL/TP; θ nuevo para entradas; M nuevo en el siguiente rebalanceo
+2021-07-23,Reversión,Tendencia,1,posiciones conservan SL/TP; θ nuevo para entradas; M nuevo en el siguiente rebalanceo
+2022-01-05,Tendencia,Reversión,3,posiciones conservan SL/TP; θ nuevo para entradas; M nuevo en el siguiente rebalanceo
+2022-02-10,Reversión,Crisis,2,rebalanceo inmediato al open siguiente con M = 0.3; entradas nuevas solo 3 de 3
+2022-09-30,Crisis,Reversión,1,posiciones conservan SL/TP; θ nuevo para entradas; M nuevo en el siguiente rebalanceo
+2022-10-21,Reversión,Crisis,1,rebalanceo inmediato al open siguiente con M = 0.3; entradas nuevas solo 3 de 3
+2023-01-26,Crisis,Reversión,0,posiciones conservan SL/TP; θ nuevo para entradas; M nuevo en el siguiente rebalanceo
+2023-02-09,Reversión,Crisis,3,rebalanceo inmediato al open siguiente con M = 0.3; entradas nuevas solo 3 de 3
+2023-05-15,Crisis,Tendencia,0,posiciones conservan SL/TP; θ nuevo para entradas; M nuevo en el siguiente rebalanceo
+2023-09-08,Tendencia,Reversión,2,posiciones conservan SL/TP; θ nuevo para entradas; M nuevo en el siguiente rebalanceo
+2023-12-26,Reversión,Tendencia,5,posiciones conservan SL/TP; θ nuevo para entradas; M nuevo en el siguiente rebalanceo

@@ -1,0 +1,7 @@
+ticker,primera_fecha,ultima_fecha,dias_con_datos,fechas_faltantes_vs_calendario,nans_en_filas_presentes,duplicados,violaciones_high,violaciones_low,precios_no_positivos,volumen_no_positivo,n_rend_extremos,rend_extremos,completo_y_traslapado
+NVDA,2015-01-02,2026-08-31,2932,0,0,0,0,0,0,0,1,2016-11-11:+29.8%,True
+AMZN,2015-01-02,2026-08-31,2932,0,0,0,0,0,0,0,0,,True
+TSLA,2015-01-02,2026-08-31,2932,0,0,0,0,0,0,0,0,,True
+META,2015-01-02,2026-08-31,2932,0,0,0,0,0,0,0,1,2022-02-03:-26.4%,True
+NFLX,2015-01-02,2026-08-31,2932,0,0,0,0,0,0,0,1,2022-04-20:-35.1%,True
+GOOGL,2015-01-02,2026-08-31,2932,0,0,0,0,0,0,0,0,,True

@@ -1,0 +1,52 @@
+{
+  "activo": "NVDA",
+  "ventana": {
+    "k": 100,
+    "train_start": "2023-10-27",
+    "train_end": "2024-04-26",
+    "test_start": null,
+    "test_end": null
+  },
+  "importancia": {
+    "bb_k": 0.5939060238320061,
+    "rsi_upper": 0.14531489304112988,
+    "rsi_window": 0.08609136859670385,
+    "m_tp": 0.050155343919904755,
+    "m_sl": 0.03689152723621237,
+    "max_hold": 0.03549576439316862,
+    "ema_fast": 0.03291049154686624,
+    "bb_window": 0.014047737093918487,
+    "rsi_lower": 0.0031943274016445066,
+    "ema_gap": 0.0019925229384452027
+  },
+  "top2": [
+    "bb_k",
+    "rsi_upper"
+  ],
+  "robusto": {
+    "ema_fast": 26,
+    "ema_gap": 68,
+    "rsi_window": 11,
+    "rsi_lower": 23,
+    "rsi_upper": 63,
+    "bb_window": 19,
+    "bb_k": 1.6077887770944987,
+    "m_sl": 2.1075389490142435,
+    "m_tp": 1.3805899345832802,
+    "max_hold": 26
+  },
+  "calmar_robusto": -0.8070806052743912,
+  "argmax": {
+    "ema_fast": 25,
+    "ema_gap": 65,
+    "rsi_window": 11,
+    "rsi_lower": 25,
+    "rsi_upper": 63,
+    "bb_window": 21,
+    "bb_k": 1.6077887770944987,
+    "m_sl": 1.9661990064592552,
+    "m_tp": 1.0665711886513556,
+    "max_hold": 25
+  },
+  "calmar_argmax": -0.3336179965125123
+}

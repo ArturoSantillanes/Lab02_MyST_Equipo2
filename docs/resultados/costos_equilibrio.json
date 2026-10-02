@@ -1,0 +1,12 @@
+{
+  "comision_oficial": 0.00125,
+  "comision_equilibrio": 0.0006015164025305282,
+  "equilibrio_fuera_de_rango": false,
+  "margen_puntos": -0.0006484835974694718,
+  "margen_multiplo": 0.48121312202442257,
+  "turnover_anual": 5.273725075404447,
+  "costo_anual_por_rotacion": 0.013184312688511118,
+  "costos_totales_oficial": 104402.23377978602,
+  "pnl_bruto_oficial": 49078.353052656035,
+  "pnl_neto_oficial": -55323.88072712999
+}

@@ -1,0 +1,93 @@
+{
+  "features": [
+    "volatilidad",
+    "r2_tendencia"
+  ],
+  "k": 3,
+  "ventana_features": 63,
+  "actualizacion_cada_dias": 5,
+  "persistencia_actualizaciones": 2,
+  "silhouette": {
+    "promedio_ventanas": 0.4683017404516047,
+    "minimo": 0.3881285207778612,
+    "maximo": 0.546758912098732,
+    "modelo_final": 0.47271139041256016,
+    "objetivo": 0.4
+  },
+  "persistencia_wf_oos": {
+    "n_transiciones": 41,
+    "transiciones_por_anio": 4.936454849498328,
+    "duracion_promedio_global": 49.833333333333336,
+    "por_regimen": {
+      "Tendencia": {
+        "proporcion_tiempo": 0.4027711419015767,
+        "n_episodios": 17,
+        "duracion_promedio_observada": 49.588235294117645,
+        "duracion_esperada_markov": 52.625000000000135
+      },
+      "Reversión": {
+        "proporcion_tiempo": 0.3320592451027234,
+        "n_episodios": 14,
+        "duracion_promedio_observada": 49.642857142857146,
+        "duracion_esperada_markov": 49.64285714285723
+      },
+      "Crisis": {
+        "proporcion_tiempo": 0.26516961299569997,
+        "n_episodios": 11,
+        "duracion_promedio_observada": 50.45454545454545,
+        "duracion_esperada_markov": 50.4545454545454
+      }
+    }
+  },
+  "matriz_transicion_wf_oos": {
+    "Tendencia": {
+      "Tendencia": 0.980998,
+      "Reversión": 0.01295,
+      "Crisis": 0.012613
+    },
+    "Reversión": {
+      "Tendencia": 0.011876,
+      "Reversión": 0.979856,
+      "Crisis": 0.007207
+    },
+    "Crisis": {
+      "Tendencia": 0.007126,
+      "Reversión": 0.007194,
+      "Crisis": 0.98018
+    }
+  },
+  "centroides_modelo_final": {
+    "volatilidad": {
+      "Reversión": 0.2825343860031666,
+      "Crisis": 0.4599837907132226,
+      "Tendencia": 0.224121082690022
+    },
+    "r2_tendencia": {
+      "Reversión": 0.17460512721471533,
+      "Crisis": 0.49714270946887895,
+      "Tendencia": 0.7353359967863885
+    }
+  },
+  "kruskal_portafolio_rp": {
+    "estadistico": 4.730072449091154,
+    "p_valor": 0.0939458971594063
+  },
+  "kruskal_indice_ew": {
+    "estadistico": 1.3710880041981,
+    "p_valor": 0.503816078008101
+  },
+  "fallbacks": {
+    "por_regimen": {
+      "Tendencia": 277,
+      "Reversión": 337,
+      "Crisis": 602
+    },
+    "estudios_por_regimen": 606
+  },
+  "transiciones": {
+    "n": 41,
+    "con_posiciones_abiertas": 30,
+    "posiciones_afectadas": 78,
+    "a_crisis": 11
+  }
+}
