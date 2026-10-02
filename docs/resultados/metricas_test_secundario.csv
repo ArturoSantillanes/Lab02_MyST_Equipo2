@@ -1,0 +1,2 @@
+conjunto,inicio,fin,dias,retorno_total,cagr,volatilidad,sharpe,sortino,mdd,calmar,recovery_factor,duracion_max_dd,n_operaciones,n_largas,n_cortas,win_rate,payoff,profit_factor,turnover_anual,costos_totales,pnl_bruto,pnl_neto,costos_vs_pnl_bruto,sistema
+TEST (WF continuo),2024-05-01,2026-08-31,585,0.04259959304,0.01816425809,0.05827848537,0.3378542687,0.5438541673,0.07277381978,0.2495988,0.5853697548,277,176,78,98,0.4431818182,1.393545604,1.109148542,6.203713955,36544.96828,79144.56132,42599.59304,0.4617495842,RP

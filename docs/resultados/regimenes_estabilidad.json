@@ -1,0 +1,52 @@
+{
+  "train_wf_oos": {
+    "n_transiciones": 41,
+    "transiciones_por_anio": 4.936454849498328,
+    "duracion_promedio_global": 49.833333333333336,
+    "por_regimen": {
+      "Tendencia": {
+        "proporcion_tiempo": 0.4027711419015767,
+        "n_episodios": 17,
+        "duracion_promedio_observada": 49.588235294117645,
+        "duracion_esperada_markov": 52.625000000000135
+      },
+      "Reversión": {
+        "proporcion_tiempo": 0.3320592451027234,
+        "n_episodios": 14,
+        "duracion_promedio_observada": 49.642857142857146,
+        "duracion_esperada_markov": 49.64285714285723
+      },
+      "Crisis": {
+        "proporcion_tiempo": 0.26516961299569997,
+        "n_episodios": 11,
+        "duracion_promedio_observada": 50.45454545454545,
+        "duracion_esperada_markov": 50.4545454545454
+      }
+    }
+  },
+  "test": {
+    "n_transiciones": 13,
+    "transiciones_por_anio": 5.580919931856899,
+    "duracion_promedio_global": 41.92857142857143,
+    "por_regimen": {
+      "Tendencia": {
+        "proporcion_tiempo": 0.5110732538330494,
+        "n_episodios": 6,
+        "duracion_promedio_observada": 50.0,
+        "duracion_esperada_markov": 49.99999999999996
+      },
+      "Reversión": {
+        "proporcion_tiempo": 0.36115843270868825,
+        "n_episodios": 7,
+        "duracion_promedio_observada": 30.285714285714285,
+        "duracion_esperada_markov": 35.166666666666714
+      },
+      "Crisis": {
+        "proporcion_tiempo": 0.12776831345826234,
+        "n_episodios": 1,
+        "duracion_promedio_observada": 75.0,
+        "duracion_esperada_markov": 75.00000000000014
+      }
+    }
+  }
+}

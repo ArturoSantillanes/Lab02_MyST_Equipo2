@@ -100,7 +100,7 @@ Figura: `07a_contribuciones_riesgo.png`
 ## 11. Resultado: entrenamiento y prueba (Arturo, 50 s)
 
 - WF-OOS: CAGR -0.7%, Calmar -0.04 (B&H 0.76)
-- TEST: [PENDIENTE: test]
+- TEST congelado: CAGR -0.5%, Calmar -0.06 (B&H 0.99)
 
 Figura: `01_valor_portafolio.png`
 

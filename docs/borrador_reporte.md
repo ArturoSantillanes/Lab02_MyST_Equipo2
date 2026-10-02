@@ -7,9 +7,9 @@ Integrantes: Milca (TSLA, NFLX), Paula (META, AMZN), Arturo (NVDA, GOOGL).
 
 Construimos un sistema de trading multi-activo sobre seis acciones tecnológicas de gran capitalización (NVDA, AMZN, TSLA, META, NFLX, GOOGL) con datos diarios de 2015-01-02 a 2026-08-31. Cada activo opera largo y corto con tres indicadores de familias distintas (cruce de EMAs, RSI y Bandas de Bollinger) y la regla de confirmación 2 de 3; las salidas son por stop-loss y take-profit en múltiplos de ATR, señal contraria o time-stop. Un detector de régimen (K-means) clasifica el mercado en Tendencia, Reversión o Crisis, los parámetros se optimizan por régimen con Optuna maximizando el Calmar en un walk-forward de 6 meses → 1 mes, y las posiciones se agregan en un portafolio de Risk Parity con costos de 0.125% por lado y sin apalancamiento.
 
-En el tramo fuera de muestra del walk-forward dentro de TRAIN (2016-01-04 a 2024-04-26), el portafolio Risk Parity obtuvo un CAGR de -0.7%, Sharpe de -0.10, drawdown máximo de 15.8% y Calmar de -0.04, frente a un Calmar de -0.07 con pesos iguales y 0.76 del Buy & Hold. La eficiencia del walk-forward (WFE) es -0.07 en rendimiento anualizado (-0.01 en Calmar). En TEST, con el sistema congelado, el CAGR fue [PENDIENTE: test], el MDD [PENDIENTE: test] y el Calmar [PENDIENTE: test] (Buy & Hold: [PENDIENTE: test]).
+En el tramo fuera de muestra del walk-forward dentro de TRAIN (2016-01-04 a 2024-04-26), el portafolio Risk Parity obtuvo un CAGR de -0.7%, Sharpe de -0.10, drawdown máximo de 15.8% y Calmar de -0.04, frente a un Calmar de -0.07 con pesos iguales y 0.76 del Buy & Hold. La eficiencia del walk-forward (WFE) es -0.07 en rendimiento anualizado (-0.01 en Calmar). En TEST, con el sistema congelado, el CAGR fue -0.5%, el MDD 7.1% y el Calmar -0.06 (Buy & Hold: 28.6%).
 
-**Conclusión:** el sistema no genera rendimiento ajustado por riesgo positivo fuera de muestra, así que la evidencia no respalda una ventaja real; 1 de 13 parámetros/multiplicadores muestran un pico (el Calmar cambia más de 50% o de signo con ±20%); el Calmar del sistema queda por debajo del Buy & Hold en el mismo periodo; antes de costos el sistema gana $49,078, pero con 0.125% por lado y una rotación de 5.3 veces al año los costos se lo comen; el veredicto final depende del TEST, que se corre una sola vez.
+**Conclusión:** el sistema no genera rendimiento ajustado por riesgo positivo fuera de muestra, así que la evidencia no respalda una ventaja real; 1 de 13 parámetros/multiplicadores muestran un pico (el Calmar cambia más de 50% o de signo con ±20%); el Calmar del sistema queda por debajo del Buy & Hold en el mismo periodo; antes de costos el sistema gana $49,078, pero con 0.125% por lado y una rotación de 5.3 veces al año los costos se lo comen.
 
 ## 2. Datos, auditoría y selección de activos
 
@@ -112,9 +112,9 @@ La variante oficial (**por_activo**) se eligió por el mayor Calmar WF-OOS dentr
 | WF-OOS | RP | -0.7% | -0.10 | -0.13 | 15.8% | -0.04 | 42.1% | 624 |
 | WF-OOS | EW | -1.3% | -0.21 | -0.28 | 18.5% | -0.07 | 42.0% | 624 |
 | WF-OOS | Buy & Hold | 46.1% | 1.21 | 1.77 | 60.9% | 0.76 | 100.0% | 6 |
-| TEST | RP | [PENDIENTE: test] | [PENDIENTE: test] | [PENDIENTE: test] | [PENDIENTE: test] | [PENDIENTE: test] | [PENDIENTE: test] | [PENDIENTE: test] |
-| TEST | EW | [PENDIENTE: test] | [PENDIENTE: test] | [PENDIENTE: test] | [PENDIENTE: test] | [PENDIENTE: test] | [PENDIENTE: test] | [PENDIENTE: test] |
-| TEST | Buy & Hold | [PENDIENTE: test] | [PENDIENTE: test] | [PENDIENTE: test] | [PENDIENTE: test] | [PENDIENTE: test] | [PENDIENTE: test] | [PENDIENTE: test] |
+| TEST | RP | -0.5% | -0.06 | -0.08 | 7.1% | -0.06 | 46.0% | 176 |
+| TEST | EW | -0.3% | -0.04 | -0.05 | 7.1% | -0.05 | 46.0% | 176 |
+| TEST | Buy & Hold | 28.6% | 1.01 | 1.50 | 28.8% | 0.99 | 100.0% | 6 |
 
 WF-IS es el promedio de las métricas in-sample de cada ventana de 6 meses (sus trains se traslapan); WF-OOS es la simulación continua de los meses de prueba concatenados.
 
@@ -139,6 +139,10 @@ WF-IS es el promedio de las métricas in-sample de cada ventana de 6 meses (sus 
 ![rendimientos trimestrales](figures/03b_retornos_trimestrales.png)
 
 *Figura: rendimientos trimestrales.*
+
+![rendimientos mensuales en TEST](figures/03c_retornos_mensuales_test.png)
+
+*Figura: rendimientos mensuales en TEST.*
 
 ![valor del portafolio en entrenamiento y prueba](figures/01_valor_portafolio.png)
 
@@ -214,8 +218,13 @@ WF-IS es el promedio de las métricas in-sample de cada ventana de 6 meses (sus 
 Prueba de Kruskal-Wallis (H0: misma distribución de rendimientos diarios entre regímenes) para el portafolio RP: p = 0.094.
 
 
-**Estabilidad fuera de muestra (TRAIN vs. TEST):** [PENDIENTE: test]
+**Estabilidad fuera de muestra (TRAIN WF-OOS vs. TEST):**
 
+| Régimen | % tiempo TRAIN | % tiempo TEST | Duración TRAIN | Duración TEST |
+|---|---|---|---|---|
+| Tendencia | 40.3% | 51.1% | 49.6 | 50.0 |
+| Reversión | 33.2% | 36.1% | 49.6 | 30.3 |
+| Crisis | 26.5% | 12.8% | 50.5 | 75.0 |
 
 ## 8. Metodología del portafolio
 
@@ -458,7 +467,7 @@ El costo total baja de forma monótona al revisar con menos frecuencia o con ban
 
 **1. ¿Qué aporta la regla 2 de 3 frente a un solo indicador?** Con 2 de 3 el portafolio hizo 624 operaciones con Calmar -0.04; con un solo indicador, entre 827 y 1,424 operaciones y Calmar entre -0.10 y 0.13. La confirmación reduce el número de operaciones frente al promedio de los indicadores solos (1,038). En Calmar no supera a todos: el mejor indicador solo es solo EMA (0.13).
 
-**2. ¿Cuánto se degrada de train a test en el walk-forward?** El CAGR in-sample promedio por ventana fue 10.5% y el CAGR WF-OOS -0.7%: WFE = -0.07 (Calmar: 6.26 → -0.04, WFE = -0.01). Con train anclado la WFE es -0.31. Sobrevive menos de la mitad de la ventaja in-sample: la mayor parte es ajuste a la muestra. TEST: [PENDIENTE: test].
+**2. ¿Cuánto se degrada de train a test en el walk-forward?** El CAGR in-sample promedio por ventana fue 10.5% y el CAGR WF-OOS -0.7%: WFE = -0.07 (Calmar: 6.26 → -0.04, WFE = -0.01). Con train anclado la WFE es -0.31. Sobrevive menos de la mitad de la ventaja in-sample: la mayor parte es ajuste a la muestra. En TEST (sistema congelado) el Calmar fue -0.06.
 
 **3. ¿Qué tan sensible es a ±20%?** Con rsi_upper el Calmar cambia más de 50% o cambia de signo (pico); el resto (12 de 13) se comporta como meseta. El mayor cambio relativo fue 69.7% (rsi_upper) y la mayor caída 32.0% (bb_k).
 
@@ -473,17 +482,17 @@ El costo total baja de forma monótona al revisar con menos frecuencia o con ban
 
 ## 14. Advertencia de ejecución
 
-**El backtest asume ejecución completa al precio modelado (open o nivel exacto de SL/TP) y no incorpora impacto de mercado ni fallas de ejecución.** Para estimar la magnitud, el sistema se re-simuló con las mismas señales (WF-OOS de TRAIN) agregando spread de 2 pb, borrow fee de 0.5% anual sobre cortos e impacto η·(|q|/ADV)^(2/3) con η = 0.1, y un barrido de slippage por operación:
+**El backtest asume ejecución completa al precio modelado (open o nivel exacto de SL/TP) y no incorpora impacto de mercado ni fallas de ejecución.** Para estimar la magnitud, el sistema se re-simuló con las mismas señales (TEST) agregando spread de 2 pb, borrow fee de 0.5% anual sobre cortos e impacto η·(|q|/ADV)^(2/3) con η = 0.1, y un barrido de slippage por operación:
 
 | Escenario | CAGR | Calmar | Δ CAGR | Δ Calmar |
 |---|---|---|---|---|
-| oficial (solo comisión) | -0.7% | -0.04 | +0.00 pp | +0.00 |
-| realista (spread+borrow+impacto) | -0.9% | -0.06 | -0.25 pp | -0.01 |
-| slippage 2.5 bps | -0.9% | -0.06 | -0.26 pp | -0.02 |
-| slippage 5 bps | -1.2% | -0.07 | -0.52 pp | -0.03 |
-| slippage 10 bps | -1.7% | -0.09 | -1.04 pp | -0.05 |
-| slippage 15 bps | -2.2% | -0.11 | -1.56 pp | -0.06 |
-| slippage 20 bps | -2.8% | -0.11 | -2.07 pp | -0.07 |
+| oficial (solo comisión) | -0.5% | -0.06 | +0.00 pp | +0.00 |
+| realista (spread+borrow+impacto) | -0.7% | -0.09 | -0.22 pp | -0.03 |
+| slippage 2.5 bps | -0.7% | -0.10 | -0.30 pp | -0.04 |
+| slippage 5 bps | -1.0% | -0.13 | -0.59 pp | -0.07 |
+| slippage 10 bps | -1.6% | -0.19 | -1.19 pp | -0.13 |
+| slippage 15 bps | -2.2% | -0.24 | -1.77 pp | -0.18 |
+| slippage 20 bps | -2.8% | -0.28 | -2.35 pp | -0.22 |
 
-En el escenario realista el CAGR cambia -0.25 puntos porcentuales y el Calmar -0.01. Con $1,000,000 la participación sobre el volumen diario es mínima, así que el impacto es pequeño; el riesgo dominante es el slippage de los stops en días de gap.
+En el escenario realista el CAGR cambia -0.22 puntos porcentuales y el Calmar -0.03. Con $1,000,000 la participación sobre el volumen diario es mínima, así que el impacto es pequeño; el riesgo dominante es el slippage de los stops en días de gap.
 

@@ -2,7 +2,7 @@
 
 Exposición: 7 de octubre de 2026. Último commit válido: 6 de octubre de 2026, 23:59.
 
-† = queda PENDIENTE hasta que el equipo corra el TEST real.
+† = depende del TEST real (corrido el 2026-10-02, commit cff97be).
 
 | ID | Requisito | Estado | Evidencia |
 |----|-----------|--------|-----------|
@@ -44,18 +44,18 @@ Exposición: 7 de octubre de 2026. Último commit válido: 6 de octubre de 2026,
 | B26 | "Supuestos y decisiones" completo en el reporte | PASS | `docs/borrador_reporte.md` §12: 20 supuestos |
 | B27 | θ robusto (meseta) usado en vez del argmax; argmax guardado | PASS | `robust_params`; `parametros_por_ventana.csv` con columnas robustas y `argmax_*` |
 | B28 | Rolling vs. anchored comparados, con WFE de cada uno | PASS | por_activo: WFE -0.07; compartido: WFE -0.46; anclado_por_activo: WFE -0.31 (`variantes_comparacion.csv`, figura 13) |
-| C1 | Métricas para WF-IS, WF-OOS y TEST† por separado | PENDIENTE | WF-IS y WF-OOS en `metricas_conjuntos.csv` (RP WF-OOS Calmar -0.04); TEST† pendiente |
+| C1 | Métricas para WF-IS, WF-OOS y TEST† por separado | PASS | WF-IS y WF-OOS en `metricas_conjuntos.csv` (RP WF-OOS Calmar -0.04); TEST en `metricas_test.csv` (RP Calmar -0.06, 176 operaciones) |
 | C2 | Tablas de retornos mensuales, trimestrales y anuales | PASS | `retornos_{mensual,trimestral,anual}_wf_oos.csv`; figuras 03a y 03b |
 | C3 | Sensibilidad ±20% de cada parámetro, conclusión meseta/pico | PASS | `sensibilidad_veredicto.csv`: 12 mesetas, 1 pico; figura 04 |
 | C4 | Curva retorno vs. costo con punto de equilibrio y margen | PASS | Equilibrio 0.060%, margen -0.065 pp; figura 05 |
 | C5 | Fuentes de degradación discutidas con cifras | PASS | Reporte §11 «Fuentes de degradación» con cifras |
 | C6 | 2 de 3 vs. indicador único | PASS | `indicador_unico.csv` (portafolio y por activo); figura 08 |
-| C7 | Validación de régimen completa, incluyendo TRAIN vs. TEST† | PENDIENTE | Silhouette 0.468, duración 49.8 d, matriz, bootstrap; TRAIN vs TEST† pendiente |
+| C7 | Validación de régimen completa, incluyendo TRAIN vs. TEST† | PASS | Silhouette 0.468, duración 49.8 d, matriz, bootstrap; TRAIN vs TEST en `regimenes_estabilidad.json` (duración 49.8 → 41.9 d; Crisis 26.5% → 12.8% del tiempo) |
 | C8 | Métricas por régimen (estrategia y portafolio) | PASS | `metricas_por_regimen.csv` (RP, EW, B&H y 6 estrategias) con IC bootstrap y Kruskal-Wallis |
 | C9 | RP vs. EW con contribuciones al riesgo y drawdown | PASS | `rp_vs_ew_contribuciones.csv`, reporte §10 y respuesta 6; figura 07a |
 | C10 | Portafolio vs. cada activo individual | PASS | `metricas_por_activo_wf_oos.csv`; figura 10 |
 | C11 | Barrido de rebalanceo; turnover; costos vs. retorno bruto | PASS | `rebalanceo_barrido.csv` (malla 4 f × 4 δ: retorno bruto, costo, neto, turnover); figuras 07d y 11 |
-| C12 | Preguntas 1–7 respondidas con cifras propias† | PENDIENTE | Preguntas 1–7 respondidas con cifras de TRAIN (reporte §13); la parte de TEST† queda `[PENDIENTE: test]` |
+| C12 | Preguntas 1–7 respondidas con cifras propias† | PASS | Preguntas 1–7 respondidas con cifras de TRAIN y TEST (reporte §13), sin marcadores pendientes |
 | C13 | Advertencia de ejecución con magnitud estimada | PASS | `costos_ejecucion_wf_oos.csv`: escenario realista y slippage 0–20 pb; reporte §14 |
 | C14 | Cifras de reporte y presentación coinciden con `docs/resultados/` (verificación automática) | PASS | `verificacion_cifras.json`: 222 cifras verificadas, 0 errores |
 | C15 | Candado del test funcionando (en `--quick`: modificar θ → aborta) | PASS | `--quick`: θ alterado → `LockViolationError` (exit 1); θ restaurado → TEST corre; `tests/test_candado.py` (4 casos) |
@@ -76,15 +76,15 @@ Exposición: 7 de octubre de 2026. Último commit válido: 6 de octubre de 2026,
 | D7 | Responsabilidad única, nombres descriptivos, docstrings con fórmulas | PASS | Un módulo por responsabilidad; docstrings con fórmulas en indicadores, métricas, RP, régimen y motor |
 | D8 | Sin código muerto, comentado ni duplicado | PASS | Búsqueda de definiciones sin referencias → 0 (se eliminaron `data.field`, `data.ohlcv` y la duplicación de Bollinger) |
 | D9 | Uso de IA declarado en el README | PASS | `README.md` sección «Uso de asistencia de IA» |
-| E1 | `docs/reporte.pdf` generado y completo† | PENDIENTE | `docs/reporte.pdf` (22 páginas) generado; marcadores `[PENDIENTE: test]` hasta correr el TEST† |
-| E2 | `docs/presentacion.pdf` ≤ 12 diapositivas, sin capturas de código† | PENDIENTE | `docs/presentacion.pdf`: portada + 12 diapositivas + cierre, sin capturas de código; cifras de TEST† pendientes |
+| E1 | `docs/reporte.pdf` generado y completo† | PASS | `docs/reporte.pdf` (24 páginas) generado con cifras de TEST; verificación automática OK (`verificacion_cifras.json`) |
+| E2 | `docs/presentacion.pdf` ≤ 12 diapositivas, sin capturas de código† | PASS | `docs/presentacion.pdf`: portada + 12 diapositivas + cierre (14 páginas), sin capturas de código, con cifras de TEST |
 | E3 | Reparto de la exposición entre Milca, Paula y Arturo (10 min) | PASS | Milca 4, Paula 4, Arturo 4 diapositivas de 50 s (10 min) en `borrador_presentacion.md` |
 | E4 | Material de estudio en `../Lab02_estudio/` | PASS | `../Lab02_estudio/`: guia_revision.md, plan_commits.md, notas_orador.md |
 | E5 | Recordatorio en `plan_commits.md`: último commit antes de 23:59 del 6-oct-2026 | PASS | Recordatorio al inicio de `plan_commits.md`: último commit 6-oct-2026 23:59 |
 
 ## Ciclo de verificación
 
-Ítems: 75 — PASS 70, FAIL 0, PENDIENTE 5 (todos los PENDIENTE dependen del TEST real, marcados con †).
+Ítems: 75 — PASS 75, FAIL 0, PENDIENTE 0. TEST corrido una vez el 2026-10-02 sobre el commit cff97be (`test_lock.json`).
 
 | Pasada | Qué se corrió | Hallazgos | Cambios |
 |---|---|---|---|
